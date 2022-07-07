@@ -1,15 +1,14 @@
 # algoritmo1_seminario
 Algoritmo preliminar de prototipo de aplicación móvil para el aporte de lectura de clientes con tarifa básica para una empresa de distribución eléctrica
 
+#Inicio de algoritmo
+#se cargan la librerias
     import cv2
     import numpy as np
-    import time
-    from matplotlib import pyplot as plt
-    import pytesseract
     import skimage
-    #import easyocr
-
     from paddleocr import PaddleOCR,draw_ocr
+    
+#Se genera una matriz de orden 2 para el eje X y eje Y, cada punto posee un color distinto, estos son ordenados en base a una jerarquia para dibujar contornos.
 
     def ordenar_puntos(puntos):
         n_puntos = np.concatenate([puntos[0], puntos[1], puntos[2], puntos[3]]).tolist()
